@@ -34,6 +34,22 @@ Event Trace
 Artifacts
 ```
 
+## Computational Model
+
+This system defines a contract-driven deterministic execution model (CEM), where computation is expressed as structured contracts evaluated through a fixed execution graph.
+
+See [Contract Execution Model](docs/computational_model.md) and [Paradigm comparison](docs/paradigm_comparison.md).
+
+## System Invariants
+
+- I1: Determinism invariant
+- I2: Graph invariance (structure fixed)
+- I3: Trace immutability
+- I4: Adapter isolation
+- I5: Artifact consistency
+
+See [System invariants](docs/invariants.md).
+
 ## Overview
 
 **desktop-ai-job-runtime-contracts** is a lightweight, dependency-free Python library that defines the contract surface for running AI inference jobs in a local desktop environment. It provides job manifest schemas, a runtime adapter boundary, execution tracing, and an export guard stub — all without any external dependencies.
