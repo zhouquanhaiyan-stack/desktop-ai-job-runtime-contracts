@@ -1,0 +1,34 @@
+﻿name: Documentation issue
+description: Report missing, unclear, or outdated documentation
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Documentation page
+      description: Which file or section is affected?
+      placeholder: e.g., docs/export_guard.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: unclear
+    attributes:
+      label: What is unclear?
+      description: Describe the confusing or missing part.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: How would you improve this section?
+    validations:
+      required: true
+
+  - type: textarea
+    id: related
+    attributes:
+      label: Related example or API
+      description: Is there a related example script, test, or API that should be linked?

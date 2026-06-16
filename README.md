@@ -1,5 +1,9 @@
 ﻿# Desktop AI Job Runtime Contracts
 
+[![CI](https://github.com/zhouquanhaiyan-stack/desktop-ai-job-runtime-contracts/actions/workflows/ci.yml/badge.svg)](https://github.com/zhouquanhaiyan-stack/desktop-ai-job-runtime-contracts/actions/workflows/ci.yml)
+
+
+
 ## Overview
 
 **desktop-ai-job-runtime-contracts** is a lightweight, dependency-free Python library that defines the contract surface for running AI inference jobs in a local desktop environment. It provides job manifest schemas, a runtime adapter boundary, execution tracing, and an export guard stub — all without any external dependencies.
@@ -124,6 +128,9 @@ desktop-ai-job-runtime-contracts/
 - [ ] Artifact hashing and integrity verification
 - [ ] Plugin-style adapter discovery
 
+
+The project uses a small CI workflow to verify syntax, unit tests, and the example runner across supported Python versions.
+
 ## Maintainer note
 
 This project is maintained as an open-source reference implementation for local desktop AI workflow contracts. It is not a product, and no real licensing, payment, or server-side infrastructure is included. Contributions and feedback are welcome.
@@ -139,3 +146,4 @@ See [SECURITY.md](SECURITY.md) for reporting vulnerabilities.
 ## License
 
 MIT — see [LICENSE](LICENSE) for the full text.
+

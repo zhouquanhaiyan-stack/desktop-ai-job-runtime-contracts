@@ -1,4 +1,12 @@
 ﻿# Changelog
+## [0.1.1] - Unreleased
+
+### Added
+
+- GitHub Actions CI for syntax checks, unit tests, and example execution.
+- Issue templates for bug reports, feature requests, and documentation improvements.
+- Pull request template for dependency-free contract changes.
+
 
 ## 0.1.0 (2026-06-17)
 
@@ -12,3 +20,4 @@
 - Examples: fake_audio_job, fake_image_job, run_fake_job.py
 - Tests: manifest, adapter, trace, export_guard (unittest)
 - Documentation: architecture, job_manifest, adapter_contract, execution_trace, export_guard
+

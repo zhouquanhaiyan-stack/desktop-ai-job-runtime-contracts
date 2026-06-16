@@ -1,0 +1,71 @@
+﻿name: Bug report
+description: Report a reproducible problem
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Affected version / commit
+      description: Which version or commit hash are you using?
+      placeholder: e.g., 0.1.0 or 58e867b
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      description: Which Python version are you on?
+      placeholder: e.g., 3.11.9
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: What OS are you running?
+      placeholder: e.g., Windows 11, Ubuntu 24.04, macOS 15
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce the issue?
+      placeholder: |
+        1. Create a manifest with ...
+        2. Run run_job(...)
+        3. See error ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or trace output
+      description: Paste relevant terminal output or trace events.
+      render: text
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Any other details, screenshots, or related issues.

@@ -1,0 +1,39 @@
+﻿name: Feature request
+description: Suggest a small, contract-oriented improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What limitation or gap are you trying to address?
+      placeholder: e.g., "The current manifest schema does not support ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: contract-change
+    attributes:
+      label: Proposed contract change
+      description: Describe the new field, dataclass, enum variant, or adapter method.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Example manifest or adapter use case
+      description: Show a brief JSON example or code sketch of how this would be used.
+      render: text
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches did you consider?
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility impact
+      description: Would this break existing manifests, adapters, or trace consumers?
