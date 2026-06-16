@@ -98,6 +98,15 @@ Every job run produces an ordered list of TraceEvent entries, each with a unique
 
 See [Architecture v2 stable documentation](docs/architecture_v2_stable.md).
 
+## Architecture v3 (Formal Spec Layer)
+
+- Declarative runtime specification
+- Schema-driven contract definitions
+- Formal execution model representation
+- Audit-ready system structure
+
+See [Architecture v3](docs/architecture_v3.md) and [Specification overview](docs/specification_overview.md).
+
 ## Export guard policy
 
 The ExportGuard is a **demonstration-only** stub that maps artifact kinds to plan tiers:

@@ -1,0 +1,80 @@
+{
+  "version": "v3",
+  "schemas": {
+    "job_manifest": {
+      "type": "object",
+      "required": ["job_id", "job_type", "inputs", "output_dir", "status"],
+      "properties": {
+        "job_id": { "type": "string" },
+        "job_type": { "type": "string" },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["input_id", "path", "media_type"],
+            "properties": {
+              "input_id": { "type": "string" },
+              "path": { "type": "string" },
+              "media_type": { "type": "string" },
+              "metadata": { "type": "object" }
+            }
+          }
+        },
+        "output_dir": { "type": "string" },
+        "status": { "type": "string" },
+        "artifacts": {
+          "type": "array",
+          "items": { "$ref": "#/schemas/artifact" }
+        },
+        "metadata": { "type": "object" }
+      }
+    },
+    "execution_graph": {
+      "type": "object",
+      "required": ["nodes"],
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["node_id", "stage", "depends_on"],
+            "properties": {
+              "node_id": { "type": "string" },
+              "stage": { "type": "string", "enum": ["scan", "execute", "finalize"] },
+              "depends_on": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "trace_event": {
+      "type": "object",
+      "required": ["event_id", "timestamp", "stage", "message", "metadata", "event_type"],
+      "properties": {
+        "event_id": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "stage": { "type": "string" },
+        "message": { "type": "string" },
+        "metadata": { "type": "object" },
+        "event_type": {
+          "type": "string",
+          "enum": ["GENERIC", "GRAPH_BUILD", "ADAPTER_START", "ADAPTER_EXECUTE", "ARTIFACT_WRITE", "ADAPTER_END"]
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": ["artifact_id", "kind", "path", "media_type", "metadata"],
+      "properties": {
+        "artifact_id": { "type": "string" },
+        "kind": { "type": "string", "enum": ["preview", "log", "trace", "manifest"] },
+        "path": { "type": "string" },
+        "media_type": { "type": "string" },
+        "metadata": { "type": "object" }
+      }
+    }
+  }
+}
