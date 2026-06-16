@@ -1,0 +1,16 @@
+{
+  "job_id": "fake-audio-job-001",
+  "job_type": "audio",
+  "inputs": [
+    {
+      "input_id": "in-001",
+      "path": "samples/input.wav",
+      "media_type": "audio/wav",
+      "metadata": {}
+    }
+  ],
+  "output_dir": "examples/out/fake-audio-job-001",
+  "status": "pending",
+  "artifacts": [],
+  "metadata": {}
+}

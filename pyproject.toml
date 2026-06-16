@@ -1,0 +1,27 @@
+﻿[build-system]
+requires = [\"setuptools>=64\"]
+build-backend = \"setuptools.backends._legacy:_Backend\"
+
+[project]
+name = \"desktop-ai-job-runtime-contracts\"
+version = \"0.1.0\"
+description = \"Runtime contracts, job manifests, adapter boundaries, execution tracing, and export guard stubs for local desktop AI tools.\"
+readme = \"README.md\"
+requires-python = \">=3.10\"
+license = {text = \"MIT\"}
+authors = [
+    {name = \"zhouquanhaiyan-stack\"},
+]
+classifiers = [
+    \"Development Status :: 3 - Alpha\",
+    \"Intended Audience :: Developers\",
+    \"License :: OSI Approved :: MIT License\",
+    \"Programming Language :: Python :: 3\",
+    \"Programming Language :: Python :: 3.10\",
+    \"Programming Language :: Python :: 3.11\",
+    \"Programming Language :: Python :: 3.12\",
+    \"Topic :: Software Development :: Libraries\",
+]
+
+[tool.setuptools.packages.find]
+where = [\"src\"]

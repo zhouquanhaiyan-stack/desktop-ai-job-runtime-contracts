@@ -1,0 +1,16 @@
+{
+  "job_id": "fake-image-job-001",
+  "job_type": "image",
+  "inputs": [
+    {
+      "input_id": "in-001",
+      "path": "samples/input.png",
+      "media_type": "image/png",
+      "metadata": {}
+    }
+  ],
+  "output_dir": "examples/out/fake-image-job-001",
+  "status": "pending",
+  "artifacts": [],
+  "metadata": {}
+}
