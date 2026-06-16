@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## [v0.1.0] - 2026-06-17
+
+### Finalized
+
+- v4 system-level documentation added
+- full architecture narrative completed
+- system boundary and execution model formalized
+
 ## [0.1.0] - 2026-06-17
 
 ### Added

@@ -192,5 +192,11 @@ See [SECURITY.md](SECURITY.md) for reporting vulnerabilities.
 
 MIT — see [LICENSE](LICENSE) for the full text.
 
+## System Overview (v4)
+
+This repository represents a deterministic runtime contract system designed for reproducible execution, structured observability, and strict boundary isolation between contract definition and runtime execution.
+
+See [System overview v4](docs/system_overview_v4.md) and [Architecture diagram v4](docs/architecture_diagram_v4.md).
+
 
 
