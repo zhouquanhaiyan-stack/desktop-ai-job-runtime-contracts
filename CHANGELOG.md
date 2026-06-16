@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+* Maintenance roadmap documenting short-term project priorities and non-goals.
+
 ## [v0.1.0] - 2026-06-17
 
 ### Finalized

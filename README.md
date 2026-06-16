@@ -208,6 +208,8 @@ The project uses a small CI workflow to verify syntax, unit tests, and the examp
 
 ## Roadmap
 
+Maintenance roadmap: [docs/maintenance_roadmap.md](docs/maintenance_roadmap.md)
+
 - [ ] Additional runtime adapter examples (e.g., ONNX, llama.cpp)
 - [ ] Streaming trace support for long-running jobs
 - [ ] Artifact hashing and integrity verification
