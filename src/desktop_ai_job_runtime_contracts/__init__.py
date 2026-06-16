@@ -7,6 +7,8 @@
 # for running AI jobs in a local desktop environment. It is intentionally
 # dependency-free and suitable for public open-source use.
 
+__version__ = "0.1.0"
+
 from .contracts import JobType, JobStatus, ArtifactKind, RuntimeCapability
 from .contracts import JobInput, JobArtifact, RuntimeAdapterInfo
 from .manifest import JobManifest, from_dict, to_dict, load_manifest, save_manifest, validate_manifest

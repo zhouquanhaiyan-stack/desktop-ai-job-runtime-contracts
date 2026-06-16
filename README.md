@@ -152,6 +152,12 @@ The project uses a small CI workflow to verify syntax, unit tests, and the examp
 
 The project uses a small CI workflow to verify syntax, unit tests, and the example runner across supported Python versions.
 
+
+## Release
+
+Current release: v0.1.0
+
+Release notes: [docs/releases/v0.1.0.md](docs/releases/v0.1.0.md)
 ## Maintainer note
 
 This project is maintained as an open-source reference implementation for local desktop AI workflow contracts. It is not a product, and no real licensing, payment, or server-side infrastructure is included. Contributions and feedback are welcome.
@@ -167,5 +173,6 @@ See [SECURITY.md](SECURITY.md) for reporting vulnerabilities.
 ## License
 
 MIT — see [LICENSE](LICENSE) for the full text.
+
 
 

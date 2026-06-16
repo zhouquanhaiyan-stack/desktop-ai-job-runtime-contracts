@@ -1,31 +1,22 @@
 ﻿# Changelog
-## [0.1.1] - Unreleased
+
+## [Unreleased]
+
+## [0.1.0] - 2026-06-17
 
 ### Added
 
-- GitHub Actions CI for syntax checks, unit tests, and example execution.
-- Issue templates for bug reports, feature requests, and documentation improvements.
-- Pull request template for dependency-free contract changes.
-- Text job example for contract smoke testing.
-- Examples documentation covering audio, image, and text manifests.
-- Unit tests for example manifests and text job execution.
+* Initial dependency-free runtime contract package.
+* Job manifest schema and validation helpers.
+* Runtime adapter boundary with a fake adapter for CI-safe execution.
+* Execution trace model with serializable trace events.
+* Export guard demonstration policy.
+* Audio, image, and text fake job examples.
+* Unit tests for manifests, adapters, traces, export guard behavior, and examples.
+* GitHub Actions CI across Python 3.10, 3.11, and 3.12.
+* Issue templates and pull request template for open-source maintenance.
 
 ### Changed
 
-- Example runner now accepts an optional manifest path argument.
-
-
-## 0.1.0 (2026-06-17)
-
-- Initial public release
-- Core contracts: JobType, JobStatus, ArtifactKind, RuntimeCapability, JobInput, JobArtifact, RuntimeAdapterInfo
-- Job manifest: serialization (JSON), deserialization, file I/O, and validation
-- Runtime adapter: abstract BaseRuntimeAdapter + FakeRuntimeAdapter with trace events and artifact generation
-- Execution trace: event-level recording with timestamps and metadata
-- Export guard: sample free/plus/pro policy stub
-- Runner: top-level run_job orchestration
-- Examples: fake_audio_job, fake_image_job, run_fake_job.py
-- Tests: manifest, adapter, trace, export_guard (unittest)
-- Documentation: architecture, job_manifest, adapter_contract, execution_trace, export_guard
-
-
+* Example runner supports an optional manifest path argument.
+* Test files now set their own local src import path for reliable unittest discovery.
