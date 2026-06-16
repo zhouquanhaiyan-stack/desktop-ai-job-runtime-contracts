@@ -20,6 +20,7 @@ class TraceEvent:
     stage: str
     message: str
     metadata: Dict[str, str] = field(default_factory=dict)
+    event_type: str = "GENERIC"
 
 
 @dataclass

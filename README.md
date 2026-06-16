@@ -89,6 +89,15 @@ Adapters implement BaseRuntimeAdapter and translate the generic job manifest int
 
 Every job run produces an ordered list of TraceEvent entries, each with a unique ID, UTC timestamp, stage name, message, and optional metadata. This gives downstream tooling a lightweight audit trail of what happened during execution.
 
+## Architecture v2 (Stable)
+
+- Deterministic execution graph (scan -> execute -> finalize)
+- Static contract specification layer
+- Event-sourced trace model
+- Fake adapter runtime isolation
+
+See [Architecture v2 stable documentation](docs/architecture_v2_stable.md).
+
 ## Export guard policy
 
 The ExportGuard is a **demonstration-only** stub that maps artifact kinds to plan tiers:

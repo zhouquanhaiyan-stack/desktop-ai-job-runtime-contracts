@@ -22,6 +22,11 @@ class JobManifest:
     artifacts: List[JobArtifact] = field(default_factory=list)
     metadata: Dict[str, str] = field(default_factory=dict)
 
+    def to_execution_graph(self) -> "ExecutionGraph":
+        from .execution_graph import build_graph_from_manifest
+
+        return build_graph_from_manifest(self)
+
 
 def to_dict(manifest: JobManifest) -> Dict[str, Any]:
     d = asdict(manifest)
