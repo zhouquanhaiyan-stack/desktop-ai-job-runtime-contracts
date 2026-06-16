@@ -2,6 +2,15 @@
 import json
 import tempfile
 from pathlib import Path
+
+_HERE = Path(__file__).resolve().parent
+_REPO_ROOT = _HERE.parent
+_SRC = _REPO_ROOT / "src"
+
+import sys
+if str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
 from dataclasses import asdict
 from desktop_ai_job_runtime_contracts import (
     JobType, JobStatus, JobInput, JobArtifact, ArtifactKind,
@@ -88,4 +97,3 @@ class TestManifest(unittest.TestCase):
         d = to_dict(manifest)
         self.assertEqual(len(d["artifacts"]), 1)
         self.assertEqual(d["artifacts"][0]["kind"], "preview")
-

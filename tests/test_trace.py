@@ -2,6 +2,15 @@
 import tempfile
 import json
 from pathlib import Path
+
+_HERE = Path(__file__).resolve().parent
+_REPO_ROOT = _HERE.parent
+_SRC = _REPO_ROOT / "src"
+
+import sys
+if str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
 from desktop_ai_job_runtime_contracts import ExecutionTrace
 
 
@@ -42,4 +51,3 @@ class TestTrace(unittest.TestCase):
             data = json.loads(path.read_text(encoding="utf-8"))
             self.assertEqual(data["job_id"], "trace-test-job")
             self.assertEqual(len(data["events"]), 1)
-

@@ -1,4 +1,14 @@
 ﻿import unittest
+from pathlib import Path
+
+_HERE = Path(__file__).resolve().parent
+_REPO_ROOT = _HERE.parent
+_SRC = _REPO_ROOT / "src"
+
+import sys
+if str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
 from desktop_ai_job_runtime_contracts import ArtifactKind, ExportDecision, ExportGuard
 
 
@@ -42,4 +52,3 @@ class TestExportGuard(unittest.TestCase):
     def test_unknown_plan_blocks_preview(self):
         decision = self.guard.evaluate("enterprise", ArtifactKind.PREVIEW)
         self.assertFalse(decision.allowed)
-
