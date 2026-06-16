@@ -1,8 +1,38 @@
-﻿# Desktop AI Job Runtime Contracts
+﻿# Deterministic Runtime Contract System (DRCS)
 
 [![CI](https://github.com/zhouquanhaiyan-stack/desktop-ai-job-runtime-contracts/actions/workflows/ci.yml/badge.svg)](https://github.com/zhouquanhaiyan-stack/desktop-ai-job-runtime-contracts/actions/workflows/ci.yml)
 
 
+
+A structured execution system that transforms job specifications into deterministic execution graphs with event-sourced traceability and isolated runtime adapters.
+
+## Key Idea
+
+This system separates:
+
+- Specification (what to run)
+- Execution Graph (how to run)
+- Adapter (runtime behavior)
+- Trace (what happened)
+- Artifacts (outputs)
+
+## Architecture Overview
+
+```text
+Contract Spec
+     |
+     v
+Execution Graph
+     |
+     v
+Runtime Adapter
+     |
+     v
+Event Trace
+     |
+     v
+Artifacts
+```
 
 ## Overview
 
