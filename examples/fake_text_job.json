@@ -1,0 +1,17 @@
+﻿{
+  "job_id": "fake-text-job-001",
+  "job_type": "text",
+  "inputs": [
+    {
+      "input_id": "text-input-001",
+      "path": "samples/input.txt",
+      "media_type": "text/plain"
+    }
+  ],
+  "output_dir": "examples/out/fake-text-job-001",
+  "status": "pending",
+  "artifacts": [],
+  "metadata": {
+    "purpose": "contract smoke example"
+  }
+}

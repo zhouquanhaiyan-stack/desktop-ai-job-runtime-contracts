@@ -37,6 +37,24 @@ python examples/run_fake_job.py
 python -m unittest discover -s tests
 `
 
+## Examples
+
+This repository includes three manifest examples demonstrating the contract
+across different job types. Each can be run through the same runner:
+
+```bash
+# Audio (default)
+python examples/run_fake_job.py
+
+# Image
+python examples/run_fake_job.py examples/fake_image_job.json
+
+# Text
+python examples/run_fake_job.py examples/fake_text_job.json
+```
+
+See [examples documentation](docs/examples.md) for detailed descriptions.
+
 ## Example job manifest
 
 `json
@@ -113,6 +131,7 @@ desktop-ai-job-runtime-contracts/
   examples/
     fake_audio_job.json
     fake_image_job.json
+    fake_text_job.json
     run_fake_job.py
   tests/
     test_manifest.py
@@ -120,6 +139,8 @@ desktop-ai-job-runtime-contracts/
     test_trace.py
     test_export_guard.py
 `
+
+The project uses a small CI workflow to verify syntax, unit tests, and the example runner across supported Python versions.
 
 ## Roadmap
 
@@ -146,4 +167,5 @@ See [SECURITY.md](SECURITY.md) for reporting vulnerabilities.
 ## License
 
 MIT — see [LICENSE](LICENSE) for the full text.
+
 

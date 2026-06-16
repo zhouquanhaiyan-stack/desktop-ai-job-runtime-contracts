@@ -85,3 +85,5 @@ Orchestration entry point:
 - **Typed contracts** — all data structures are fully typed
 - **Separation of concerns** — manifest, adapter, trace, and guard are independent modules
 - **Testability** — the FakeRuntimeAdapter enables testing without real AI infrastructure
+- **CI readiness** — the fake adapter exists to make the contract executable in CI without external models, cloud services, or private runtime dependencies.
+

@@ -3,6 +3,8 @@
 
 Usage:
     python examples/run_fake_job.py
+    python examples/run_fake_job.py examples/fake_image_job.json
+    python examples/run_fake_job.py examples/fake_text_job.json
 
 This script works without installing the package by adding
 the src directory to sys.path.
@@ -19,11 +21,37 @@ if str(_src) not in sys.path:
     sys.path.insert(0, str(_src))
 
 from desktop_ai_job_runtime_contracts import run_job
+from desktop_ai_job_runtime_contracts.manifest import load_manifest
+
+
+def resolve_manifest_path(raw: str, repo_root: Path) -> Path:
+    """Resolve a manifest path relative to the repo root or as an absolute path."""
+    p = Path(raw)
+    if p.is_absolute():
+        return p
+    return (repo_root / p).resolve()
 
 
 def main() -> None:
-    manifest_path = _repo_root / "examples" / "fake_audio_job.json"
-    output_dir = _repo_root / "examples" / "out" / "fake-audio-job-001"
+    argc = len(sys.argv) - 1
+
+    if argc == 0:
+        manifest_name = "fake_audio_job.json"
+        manifest_path = _repo_root / "examples" / manifest_name
+        job_slug = "fake-audio-job-001"
+    elif argc == 1:
+        manifest_path = resolve_manifest_path(sys.argv[1], _repo_root)
+        # Derive a job slug from the manifest content itself
+        try:
+            m = load_manifest(str(manifest_path))
+            job_slug = m.job_id
+        except Exception:
+            job_slug = manifest_path.stem
+    else:
+        print("Usage: python examples/run_fake_job.py [manifest_path]", file=sys.stderr)
+        sys.exit(2)
+
+    output_dir = _repo_root / "examples" / "out" / job_slug
 
     print("=" * 52)
     print("  Desktop AI Job Runtime Contracts — Fake Job Runner")
