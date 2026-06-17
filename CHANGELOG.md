@@ -5,6 +5,7 @@
 ### Added
 
 * Maintenance roadmap documenting short-term project priorities and non-goals.
+* Maintainer workflow document for contributor and reviewer guidance.
 
 ## [v0.1.0] - 2026-06-17
 

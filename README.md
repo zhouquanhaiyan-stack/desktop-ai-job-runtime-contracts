@@ -228,6 +228,8 @@ Release notes: [docs/releases/v0.1.0.md](docs/releases/v0.1.0.md)
 
 This project is maintained as an open-source reference implementation for local desktop AI workflow contracts. It is not a product, and no real licensing, payment, or server-side infrastructure is included. Contributions and feedback are welcome.
 
+See the [Maintainer Workflow](docs/maintainer_workflow.md) for the change process.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
@@ -245,6 +247,7 @@ MIT — see [LICENSE](LICENSE) for the full text.
 This repository represents a deterministic runtime contract system designed for reproducible execution, structured observability, and strict boundary isolation between contract definition and runtime execution.
 
 See [System overview v4](docs/system_overview_v4.md) and [Architecture diagram v4](docs/architecture_diagram_v4.md).
+
 
 
 
